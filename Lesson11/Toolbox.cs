@@ -10,11 +10,17 @@ namespace Toolbox
             string input = String.Empty;
             int variable = 0;
 
-            do
+            input = Console.ReadLine();
+            try
             {
-                input = Console.ReadLine();
-            } while(!Int32.TryParse(input, out variable));
-
+                Int32.TryParse(input, out variable);
+            }
+            catch
+            {
+                Console.WriteLine("Invalid Input. Set variable to 0");
+                variable = 0;
+            }
+            
             return variable;
         }
 
@@ -23,12 +29,10 @@ namespace Toolbox
             string input = String.Empty;
             char variable = '\0';
 
-            do
-            {
             input = Console.ReadLine();
             input = input.Trim();
-            variable = input[0].ToUpper();
-            } while(!variable.isletter());
+            input = input.ToUpper();
+            variable = input[0];
 
             return variable;
         }
