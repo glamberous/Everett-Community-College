@@ -1,0 +1,6 @@
+Gizmo,5
+Koda,4
+Storm,5
+Justine,5
+Stormy,3
+SteamGiftCard,3
